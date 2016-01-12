@@ -1,0 +1,50 @@
+{
+  "name": "mongoshawk-promise",
+  "description": "Mongoshawk - MongoDB ODM - Promise Version",
+  "version": "0.2.3",
+  "author": "Paul Duthoit <duthoit.paul@gmail.com>",
+  "homepage": "http://mongoshawk.com/",
+  "keywords": [
+    "mongodb",
+    "document",
+    "model",
+    "schema",
+    "database",
+    "odm",
+    "data",
+    "datastore",
+    "query",
+    "nosql",
+    "orm",
+    "db",
+    "promise"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "async": "0.9.x",
+    "deepmerge": "0.2.x",
+    "mongodb": "2.0.x",
+    "mpath": "0.2.x",
+    "promise": "7.1.x",
+    "underscore": "1.6.x"
+  },
+  "directories": {
+    "lib": "./lib/mongoshawk"
+  },
+  "bugs": {
+    "url": "https://github.com/paulduthoit/mongoshawk/issues/new",
+    "email": "duthoit.paul@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paulduthoit/mongoshawk-promise.git"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha ./tests/index.js --timeout 10000; "
+  },
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "mocha": "^2.3.4"
+  }
+}
