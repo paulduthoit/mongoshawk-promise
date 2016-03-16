@@ -44,7 +44,8 @@ var databaseOption = {};
 
 
 // Create connection
-Mongoshawk.createConnection(connectionName, databaseName, databaseServerConfig, databaseOption).then(connection) {
+Mongoshawk.createConnection(connectionName, databaseName, databaseServerConfig, databaseOption)
+    .then(function(connection) {
 
   console.log('Connection to database is established' + '\r');
 
@@ -115,7 +116,8 @@ var MyModel = Mongoshawk.getModel('MyModelName');
 var myModelInstance = new MyModel();
 
 // List documents
-myModelInstance.list({}, { field_i_want: 1 }).then(datas) {
+myModelInstance.list({}, { field_i_want: 1 })
+    .then(function(datas) {
   // ...
 });
 ```
@@ -169,7 +171,8 @@ var MyModel = Mongoshawk.getModel('MyModelName');
 var myModelInstance = new MyModel();
 
 // Show a document without populate edges
-myModelInstance.show(anId, { field_i_want: 1, edge_i_want: 1 }).then(datas) {
+myModelInstance.show(anId, { field_i_want: 1, edge_i_want: 1 })
+    .then(function(datas) {
   
  /* datas = {
         _id: '1a',
@@ -180,7 +183,8 @@ myModelInstance.show(anId, { field_i_want: 1, edge_i_want: 1 }).then(datas) {
 });
 
 // Show a document with populated edges
-myModelInstance.show(anId, { field_i_want: 1, edge_i_want: { '$fields': { field_i_want: 1 } } }).then(datas) {
+myModelInstance.show(anId, { field_i_want: 1, edge_i_want: { '$fields': { field_i_want: 1 } } })
+    .then(function(datas) {
   
  /* datas = {
         _id: '1a',
@@ -237,7 +241,8 @@ var MyModel = Mongoshawk.getModel('MyModelName');
 var myModelInstance = new MyModel();
 
 // Show a document with populated edges
-myModelInstance.show(anId, { field_i_want: 1, edges_i_want: { '$fields': { field_i_want: 1 } } }).then(datas) {
+myModelInstance.show(anId, { field_i_want: 1, edges_i_want: { '$fields': { field_i_want: 1 } } })
+    .then(function(datas) {
   
  /* datas = {
         _id: '1a',
